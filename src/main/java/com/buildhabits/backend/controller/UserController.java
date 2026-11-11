@@ -26,6 +26,13 @@ public class UserController {
     @GetMapping("/getUsers")
     public ResponseEntity<Iterable<UserRegisterDto>> getUsers(){
          
-        return ResponseEntity.status(201).body(userService.getUser());
+        return ResponseEntity.ok(userService.getUser());
+    }
+
+    @GetMapping("/getUser/{userName}")
+    public ResponseEntity<UserRegisterDto> getUserByUserName(@PathVariable  String userName){
+      
+        return ResponseEntity.ok(userService.getUserByUserName(userName));
+
     }
 }

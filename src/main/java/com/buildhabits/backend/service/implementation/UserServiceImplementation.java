@@ -10,6 +10,7 @@ import com.buildhabits.backend.entity.UserRegistration;
 import com.buildhabits.backend.repository.UserRepository;
 import com.buildhabits.backend.service.UserService;
 
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 
 @Service 
@@ -20,6 +21,7 @@ public class UserServiceImplementation implements UserService {
     private final ModelMapper modelMapper;
 
     @Override
+    @Transactional 
     public UserRegisterDto createUser(UserRegisterDto user) {
 
          if(user.getUserName()==null || user.getUserName().isBlank()){
@@ -57,6 +59,13 @@ public class UserServiceImplementation implements UserService {
       .toList();
    }
 
+    
+
+    @Override
+    public UserRegisterDto getUserByUserName(String userName) {
+      UserRegistration user= userRepo.findByUserName(userName).orElseThrow(()->new IllegalArgumentException("UserName does not exists!"));
+      return modelMapper.map(user, UserRegisterDto.class);
+   }
     
 
     

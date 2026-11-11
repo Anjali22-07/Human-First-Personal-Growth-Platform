@@ -8,5 +8,6 @@ public interface UserService {
 
     public UserRegisterDto createUser(UserRegisterDto user);
     public Iterable<UserRegisterDto> getUser();
+    public UserRegisterDto getUserByUserName(String userName);
 
 }
