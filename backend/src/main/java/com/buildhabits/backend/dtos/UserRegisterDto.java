@@ -15,13 +15,13 @@ import lombok.Setter;
 @NoArgsConstructor 
 public class UserRegisterDto {
 
-    private long id;
+   
     private String userName;
     private String email;
     private String password;    
-    private boolean emailVerified = false;
+   // private boolean emailVerified = false;
     private String timezone = "UTC";
-    private Instant createdAt = Instant.now();
+    //private Instant createdAt = Instant.now();
     
 
 }
