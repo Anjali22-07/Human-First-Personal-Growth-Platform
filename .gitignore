@@ -1,10 +1,23 @@
+
+# Help files
 HELP.md
+
+# Maven
 target/
+**/target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### STS ###
+# Node
+node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Spring Tool Suite
 .apt_generated
 .classpath
 .factorypath
@@ -13,13 +26,13 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
+# IntelliJ IDEA
+.idea/
 *.iws
 *.iml
 *.ipr
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
@@ -29,21 +42,5 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
-.vscode/
-
-# Node
-node_modules/
-
-# Maven
-target/
-**/target/
-
-# Environment variables
-.env
-.env.*
-!.env.example
-
-# IDE
-.idea/
+# VS Code
 .vscode/

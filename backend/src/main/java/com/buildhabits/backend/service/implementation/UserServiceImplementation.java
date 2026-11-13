@@ -1,11 +1,15 @@
 package com.buildhabits.backend.service.implementation;
 
+import java.util.Optional;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
+
 import com.buildhabits.backend.dtos.UserRegisterDto;
 import com.buildhabits.backend.entity.UserRegistration;
 import com.buildhabits.backend.repository.UserRepository;
 import com.buildhabits.backend.service.UserService;
+
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 

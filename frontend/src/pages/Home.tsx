@@ -96,7 +96,7 @@ export default function Home(){
               </div>
 
               <div className="rounded-3xl bg-[#E9E7EF] p-8">
-                <span className="text-3xl"><i class="fa-duotone fa-solid fa-hand-holding-heart"></i></span>
+                <span className="text-3xl"><i className="fa-duotone fa-solid fa-hand-holding-heart"></i></span>
                 <h3 className="mt-6 text-xl font-semibold">Reconnect</h3>
                 <p className="mt-3 leading-7 text-[#777387]">
                   When things don't go as planned, find your way back without
